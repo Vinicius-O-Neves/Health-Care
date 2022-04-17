@@ -1,5 +1,5 @@
 import json
 import asyncio
-from imccalculator.data.firebase.FirebaseRepository import FirebaseRepository
+from imccalculator.data.firebase.FirebaseRepositoryImp import FirebaseRepositoryImp
 
-asyncio.run(FirebaseRepository.sendToFirebase("04042022", {'batata': '400g'})) 
+asyncio.run(FirebaseRepositoryImp.sendToFirebase("06052022", {'batata': '900g'})) 
