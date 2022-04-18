@@ -1,6 +1,8 @@
 import json
 import asyncio
-from imccalculator.data.firebase.FirebaseRepositoryImp import FirebaseRepositoryImp
-from imccalculator.data.firebase.model.PersonInfoModel import PersonInfoModel
+from imcproject.data.firebase.FirebaseRepositoryImp import FirebaseRepositoryImp
+from imcproject.data.firebase.model.PersonIngestionModel import PersonIngestionModel
 
-asyncio.run(FirebaseRepositoryImp.sendToFirebase(PersonInfoModel("06052022", {'batata': '400g'}))) 
+asyncio.run(
+    FirebaseRepositoryImp.sendToFirebase(PersonIngestionModel("06052022", {'batata': '300g'}))
+    ) 
