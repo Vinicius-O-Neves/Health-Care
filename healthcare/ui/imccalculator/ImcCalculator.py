@@ -1,4 +1,4 @@
-class imcCalculator:
+class ImcCalculator:
 
     def calculate(self, weight: int, height: float) -> int:
         self.imc = weight / (height ** 2)
@@ -47,6 +47,6 @@ class imcCalculator:
     def manWith10To19(self, age: int):
         print("homem entre 10 a 19")
 
-imc = imcCalculator()
-print(imc.calculate(57, 1.77))
+imc = ImcCalculator()
+print(imc.calculate(61, 1.77))
 print(imc.analyze(10, "feminino"))
