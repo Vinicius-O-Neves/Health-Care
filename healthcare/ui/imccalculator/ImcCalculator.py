@@ -1,10 +1,10 @@
-class ImcContoller:
+class imcCalculator:
 
-    def imcCalculator(self, weight: int, height: float) -> int:
+    def calculate(self, weight: int, height: float) -> int:
         self.imc = weight / (height ** 2)
         return round(self.imc, 1)
 
-    def imcAnalyze(self, age: int, gender: str):
+    def analyze(self, age: int, gender: str):
         self.gender = gender.lower()
 
         if age >= 20:
@@ -47,6 +47,6 @@ class ImcContoller:
     def manWith10To19(self, age: int):
         print("homem entre 10 a 19")
 
-imc = ImcContoller()
-print(imc.imcCalculator(57, 1.77))
-print(imc.imcAnalyze(10, "feminino"))
+imc = imcCalculator()
+print(imc.calculate(57, 1.77))
+print(imc.analyze(10, "feminino"))
