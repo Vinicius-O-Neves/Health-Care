@@ -17,5 +17,5 @@ class ImcCalculator:
             return ImcClassifier().womanWith10To19(age, self.imc)
             
 imc = ImcCalculator()
-print(imc.calculate(59, 1.67))
-print(imc.analyze(15, "feminino"))
+print(imc.calculate(74, 1.67))
+print(imc.analyze(17, "feminino"))
