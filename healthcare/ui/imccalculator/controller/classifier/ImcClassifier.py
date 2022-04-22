@@ -32,7 +32,7 @@ class ImcClassifier:
         pImc = interval[True]
         percentile = {
             pImc < 5: "Abaixo do Peso",
-            5 >= pImc < 85: "Adequado(a)",
+            5 <= pImc < 85: "Adequado(a)",
             pImc >= 85: "Sobrepeso"
         }
         return percentile[True]
