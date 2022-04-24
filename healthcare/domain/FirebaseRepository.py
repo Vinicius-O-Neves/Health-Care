@@ -1,16 +1,13 @@
-from abc import ABC, abstractclassmethod
-import asyncio
-from data.firebase.model.PersonIngestionModel import PersonIngestionModel
-from typing import Type
+import abc
+from abc import ABC
+
 
 class FirebaseRepository(ABC):
-    
-    @abstractclassmethod
-    async def sendToFirebase(self, ingestion = Type[PersonIngestionModel]):
+
+    @abc.abstractmethod
+    def sendToFirebase(self):
         pass
 
-    @abstractclassmethod
-    async def getFromFirebase(self, dia: str, totalCal: int):
+    @abc.abstractmethod
+    def getFromFirebase(self):
         pass
-    
-
