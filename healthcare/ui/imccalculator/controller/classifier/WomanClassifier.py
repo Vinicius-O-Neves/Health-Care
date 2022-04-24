@@ -1,6 +1,6 @@
 class WomanClassifier:
     
-    def __init__(self, imc: int):
+    def __init__(self, imc: float):
         self.imc = imc
         
     def womanWith10(self) -> int:
