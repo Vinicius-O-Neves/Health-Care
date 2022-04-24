@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-@dataclass(order = True)
+
+@dataclass(order=True)
 class PersonIngestionModel:
-    personCpf: str
+    personCpf: int
     dia: str
     info: dict
-   
