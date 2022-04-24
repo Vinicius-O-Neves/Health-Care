@@ -1,5 +1,6 @@
 import pyrebase
 
+
 class FirebaseDb:
 
     def __init__(self):
@@ -8,7 +9,7 @@ class FirebaseDb:
         self.firebaseConfig = {
             'apiKey': "AIzaSyDvcnKeN3R532FenTIpQJfEMauVmPU2rQ8",
             'authDomain': "imc-calculator-547f5.firebaseapp.com",
-            'databaseURL': "https://imc-calculator-547f5-default-rtdb.firebaseio.com",
+            'databaseURL': self.url,
             'projectId': "imc-calculator-547f5",
             'storageBucket': "imc-calculator-547f5.appspot.com",
             'messagingSenderId': "1032231973463",
