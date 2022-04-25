@@ -1,5 +1,7 @@
 import pyrebase
 
+'''Objeto que com os dados para acessar o Firebase'''
+
 
 class FirebaseDb:
 
