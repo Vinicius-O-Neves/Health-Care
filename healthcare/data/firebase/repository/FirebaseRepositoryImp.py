@@ -5,6 +5,8 @@ from healthcare.domain.FirebaseRepository import FirebaseRepository
 from healthcare.data.firebase.FirebaseDb import FirebaseDb
 from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionModel
 
+'''Classe que contem todas funções para acesso e leitura no Firebase'''
+
 
 class FirebaseRepositoryImp(FirebaseRepository):
 
