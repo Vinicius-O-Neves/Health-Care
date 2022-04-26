@@ -10,6 +10,5 @@ class Strings:
         self.obesity_gdr_1 = "Obesidade Grau 1"
         self.obesity_gdr_2 = "Obesidade Grau 2"
         self.obesity_gdr_3 = "Obesidade Grau 3"
-
         self.appropriate = "Adequado(a)"
         self.over_weight = "Sobrepeso"
