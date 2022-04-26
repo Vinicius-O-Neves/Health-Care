@@ -15,7 +15,6 @@ class ImcClassifier:
             35 <= imc <= 39.9: Strings().obesity_gdr_2,
             imc >= 40: Strings().obesity_gdr_3
         }
-
         return interval[True]
 
     @staticmethod
