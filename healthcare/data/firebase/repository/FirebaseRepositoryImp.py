@@ -11,14 +11,14 @@ from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionM
 class FirebaseRepositoryImp(FirebaseRepository):
 
     @staticmethod
-    async def getFromFirebase(dia: str, totalCal: int):
+    async def getFromFirebase(ingestion=Type[PersonIngestionModel]):
         print("okok")
 
     @staticmethod
     async def sendToFirebase(ingestion=Type[PersonIngestionModel]):
         try:
             request = requests.post(
-                f'{FirebaseDb().url}/{ingestion.personCpf}/{ingestion.dia}/.json',
+                f'{FirebaseDb().url}/{ingestion.personCpf}/{ingestion.day}/.json',
                 data=json.dumps(ingestion.info)
             )
             print(request)
