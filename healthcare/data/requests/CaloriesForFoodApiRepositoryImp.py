@@ -8,12 +8,11 @@ from typing import Type
 class CaloriesForFoodApiRepositoryImp(CaloriesForFoodApiRepository):
 
     @staticmethod
-    def getAllByFood(food=Type[str]) -> FoodItemsModel:
+    def getAllByFood(food=Type[str]) -> list[FoodItemsModel]:
         foodList = requests.get(
-            RequestsInstance().BASE_URL + f"calorias/?descricao={food}") \
-            .json()
+            RequestsInstance().BASE_URL + f"calorias/?descricao={food}")
 
-        return foodList
+        return foodList.json()
 
 
 print(CaloriesForFoodApiRepositoryImp.getAllByFood("Frango"))
