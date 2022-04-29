@@ -9,5 +9,5 @@ class CaloriesForFoodApiRepository(ABC):
         pass
 
     @abc.abstractmethod
-    def getAllByFood(self) -> FoodItemsModel:
+    def getAllByFood(self) -> list[FoodItemsModel]:
         pass
