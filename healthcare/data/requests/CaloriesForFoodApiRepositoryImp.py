@@ -1,11 +1,10 @@
 import requests
 from model.FoodItemsModel import FoodItemsModel
-from healthcare.domain.CaloriesForFoodApiRepository import CaloriesForFoodApiRepository
 from RequestsInstance import RequestsInstance
 from typing import Type
 
 
-class CaloriesForFoodApiRepositoryImp(CaloriesForFoodApiRepository):
+class CaloriesForFoodApiRepositoryImp:
 
     @staticmethod
     def getAllByFood(food=Type[str]) -> list[FoodItemsModel]:
