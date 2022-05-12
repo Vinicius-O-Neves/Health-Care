@@ -4,20 +4,23 @@ from healthcare.resources.Strings import Strings
 
 class ImcCalculatorRepository:
 
-    def calculate(self, weight: int, height: float) -> float:
-        self.imc = weight / (height ** 2)
-        return round(self.imc, 2)
+    imc = None
 
-    def analyze(self, age: int, gender: str) -> str:
-        self.gender = gender.lower()
+    @classmethod
+    def calculate(cls, weight: int, height: float) -> float:
+        cls.imc = weight / (height ** 2)
+        return round(cls.imc, 2)
+
+    @classmethod
+    def analyze(cls, age: int, gender: str) -> str:
+        gender = gender.lower()
 
         if age >= 20:
-            return ImcClassifier().adult(self.imc)
-        elif 20 > age >= 10 and self.gender == Strings().male:
-            return ImcClassifier().manWith10To19(age, self.imc)
-        elif 20 > age >= 10 and self.gender == Strings().female:
-            return ImcClassifier().womanWith10To19(age, self.imc)
-
+            return ImcClassifier().adult(cls.imc)
+        elif 20 > age >= 10 and gender == Strings().male:
+            return ImcClassifier().manWith10To19(age, cls.imc)
+        elif 20 > age >= 10 and gender == Strings().female:
+            return ImcClassifier().womanWith10To19(age, cls.imc)
 
 imc = ImcCalculatorRepository()
 print(imc.calculate(62, 1.83))
