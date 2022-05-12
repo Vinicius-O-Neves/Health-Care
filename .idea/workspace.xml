@@ -19,11 +19,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/healthcare/data/requests/CaloriesForFoodApiRepositoryImp.py" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Vinic/OneDrive/Desktop/Codes/Health Care/healthcare/ui/imccalculator/controller/classifier/ImcCalculatorRepository.py"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Vinicius Neves\Desktop\Health Care\healthcare" />
@@ -36,7 +38,7 @@
       <recent name="C:\Users\Vinicius Neves\Desktop\Health Care\healthcare\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CaloriesForFoodApiRepository">
+  <component name="RunManager" selected="Python.ImcCalculatorRepository">
     <configuration name="CaloriesForFoodApiRepository" type="PythonConfigurationType" factoryName="Python">
       <module name="Health Care" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -44,7 +46,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python310\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/healthcare/data/requests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -65,7 +67,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python310\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/healthcare/ui/imccalculator/controller/classifier" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -86,7 +88,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python310\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Vinic\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/healthcare" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
