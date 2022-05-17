@@ -1,8 +1,7 @@
 from dataclasses import dataclass
 
-
 @dataclass(order=True)
 class PersonIngestionModel:
-    personCpf: int
+    id: str
     day: str
     info: dict
