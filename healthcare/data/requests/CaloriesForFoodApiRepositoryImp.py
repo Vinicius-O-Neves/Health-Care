@@ -3,7 +3,6 @@ from model.FoodItemsModel import FoodItemsModel
 from RequestsInstance import RequestsInstance
 from typing import Type
 
-
 class CaloriesForFoodApiRepositoryImp:
 
     @staticmethod
