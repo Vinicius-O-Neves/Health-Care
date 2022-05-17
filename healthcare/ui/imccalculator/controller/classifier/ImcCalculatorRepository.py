@@ -4,24 +4,32 @@ from healthcare.resources.Strings import Strings
 
 class ImcCalculatorRepository:
 
-    imc = None
+    def __init__(
+            self,
+            weight: int,
+            height: float,
+            age: int,
+            gender: str
+    ):
+        self.weight = weight
+        self.height = height
+        self.age = age
+        self.gender = gender.lower()
+        self.imc = 0
 
-    @classmethod
-    def calculate(cls, weight: int, height: float) -> float:
-        cls.imc = weight / (height ** 2)
-        return round(cls.imc, 2)
+    def calculate(self) -> float:
+        self.imc = self.weight / (self.height ** 2)
+        return round(self.imc, 2)
 
-    @classmethod
-    def analyze(cls, age: int, gender: str) -> str:
-        gender = gender.lower()
+    def analyze(self) -> str:
+        if self.age >= 20:
+            return ImcClassifier().adult(self.imc)
+        elif 20 > self.age >= 10 and self.gender == Strings().male:
+            return ImcClassifier().manWith10To19(self.age, self.imc)
+        elif 20 > self.age >= 10 and self.gender == Strings().female:
+            return ImcClassifier().womanWith10To19(self.age, self.imc)
 
-        if age >= 20:
-            return ImcClassifier().adult(cls.imc)
-        elif 20 > age >= 10 and gender == Strings().male:
-            return ImcClassifier().manWith10To19(age, cls.imc)
-        elif 20 > age >= 10 and gender == Strings().female:
-            return ImcClassifier().womanWith10To19(age, cls.imc)
 
-imc = ImcCalculatorRepository()
-print(imc.calculate(62, 1.83))
-print(imc.analyze(19, "masculino"))
+imc = ImcCalculatorRepository(62, 1.83, 19, "masculino")
+print(imc.calculate())
+print(imc.analyze())
