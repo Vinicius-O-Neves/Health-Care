@@ -6,11 +6,18 @@ from typing import Type
 class CaloriesForFoodApiRepositoryImp:
 
     @staticmethod
-    def getAllByFood(food=Type[str]) -> list[FoodItemsModel]:
-        foodList = requests.get(
-            RequestsInstance().BASE_URL + f"calorias/?descricao={food}")
+    def getAllByFood(food=Type[str]) -> list[list[FoodItemsModel]]:
+        response = requests.get(
+            RequestsInstance().BASE_URL + f"calorias/?descricao={food}").json()
+        foodList = [
+            [
+                item['descricao'],
+                str(item['quantidade']).replace("\xa0", ""),
+                item['calorias']]
+                for item in response
+        ]
 
-        return foodList.json()
+        return foodList
 
 
-print(CaloriesForFoodApiRepositoryImp.getAllByFood("Frango"))
+print(CaloriesForFoodApiRepositoryImp.getAllByFood("Macarrão"))
