@@ -5,22 +5,26 @@ from healthcare.data.firebase.FirebaseDb import FirebaseDb
 from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionModel
 
 '''Classe que contem todas funções para acesso e leitura no Firebase'''
-
-
 class FirebaseRepositoryImp:
 
     @staticmethod
-    async def getFromFirebase(ingestion=Type[PersonIngestionModel]):
-        print("okok")
+    async def getIngestionFromFirebase(id: str, day: str):
+        try:
+            request = requests.get(
+                f'{FirebaseDb().BASE_URL}/{id}/{day}/.json'
+            )
+            print(request.text)
+        except Exception as e:
+            print("Erro ao tentar puxar do Firebase")
+            print(str(e))
 
     @staticmethod
-    async def sendToFirebase(ingestion=Type[PersonIngestionModel]):
+    def sendIngestionToFirebase(ingestion=Type[PersonIngestionModel]):
         try:
             request = requests.post(
-                f'{FirebaseDb().BASE_URL}/{ingestion.personCpf}/{ingestion.day}/.json',
+                f'{FirebaseDb().BASE_URL}/{ingestion.id}/{ingestion.day}/.json',
                 data=json.dumps(ingestion.info)
             )
-            print(request)
             print(request.text)
         except Exception as e:
             print("Erro ao tentar enviar o Firebase")
