@@ -2,7 +2,6 @@ from WomanClassifier import WomanClassifier
 from ManClassifier import ManClassifier
 from healthcare.resources.Strings import Strings
 
-
 class ImcClassifier:
 
     @staticmethod
