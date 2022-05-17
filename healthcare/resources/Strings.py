@@ -12,3 +12,30 @@ class Strings:
         self.obesity_gdr_3 = "Obesidade Grau 3"
         self.appropriate = "Adequado(a)"
         self.over_weight = "Sobrepeso"
+
+        self.type_of_foods = [
+            "Macarrão",
+            "Feijão",
+            "Arroz",
+            "Frango",
+            "Carne",
+            "Peixe",
+            "Pizza",
+            "Hambúrguer",
+            "Ovo",
+            "Bolo",
+            "Doce",
+            "Pastel",
+            "Pasta",
+            "Massa",
+            "Suco",
+            "Refrigerante",
+            "Beringela",
+            "Fruta",
+            "Banana",
+            "Pera",
+            "Manga",
+            "Leite",
+            "Bebida",
+            "Café"
+        ]
