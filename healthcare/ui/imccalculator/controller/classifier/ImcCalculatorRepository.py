@@ -1,7 +1,6 @@
 from ImcClassifier import ImcClassifier
 from healthcare.resources.Strings import Strings
 
-
 class ImcCalculatorRepository:
 
     def __init__(
@@ -28,8 +27,3 @@ class ImcCalculatorRepository:
             return ImcClassifier().manWith10To19(self.age, self.imc)
         elif 20 > self.age >= 10 and self.gender == Strings().female:
             return ImcClassifier().womanWith10To19(self.age, self.imc)
-
-
-imc = ImcCalculatorRepository(62, 1.83, 19, "masculino")
-print(imc.calculate())
-print(imc.analyze())
