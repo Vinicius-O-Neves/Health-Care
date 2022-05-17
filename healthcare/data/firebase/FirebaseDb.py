@@ -1,12 +1,10 @@
 import pyrebase
 
 '''Objeto que com os dados para acessar o Firebase'''
-
-
 class FirebaseDb:
 
     def __init__(self):
-        self.BASE_URL = "https://imc-calculator-547f5-default-rtdb.firebaseio.com/"
+        self.BASE_URL = "https://imc-calculator-547f5-default-rtdb.firebaseio.com"
 
         self.firebaseConfig = {
             'apiKey': "AIzaSyDvcnKeN3R532FenTIpQJfEMauVmPU2rQ8",
