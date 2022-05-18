@@ -37,6 +37,7 @@ class FirebaseRepositoryImp:
                 f'{FirebaseDb().BASE_URL}/{ingestion.id}/{ingestion.day}/.json',
                 data=json.dumps(ingestion.info)
             )
+            
             return request
         except Exception as e:
             print(str(e))
