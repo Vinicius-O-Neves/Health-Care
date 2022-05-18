@@ -1,6 +1,6 @@
 import requests
 import json
-from typing import Type, List
+from typing import Type
 
 from requests import Response
 
@@ -37,7 +37,7 @@ class FirebaseRepositoryImp:
                 f'{FirebaseDb().BASE_URL}/{ingestion.id}/{ingestion.day}/.json',
                 data=json.dumps(ingestion.info)
             )
-            
+
             return request
         except Exception as e:
             print(str(e))
