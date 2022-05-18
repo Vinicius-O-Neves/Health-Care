@@ -1,15 +1,14 @@
 import requests
 from model.FoodItemsModel import FoodItemsModel
 from RequestsInstance import RequestsInstance
-from typing import Type
 
 
 class CaloriesForFoodApiRepositoryImp:
 
     @staticmethod
-    def getAllByFood(food: Type[str]) -> list[list[FoodItemsModel]]:
+    def getAllFoodsByType(type: str) -> list[list[FoodItemsModel]]:
         response = requests.get(
-            RequestsInstance().BASE_URL + f"calorias/?descricao={food}").json()
+            RequestsInstance().BASE_URL + f"calorias/?descricao={type}").json()
         foodList = [
             [
                 item['descricao'],
@@ -19,3 +18,4 @@ class CaloriesForFoodApiRepositoryImp:
         ]
 
         return foodList
+
