@@ -5,3 +5,4 @@ class PersonIngestionModel:
     id: str
     day: str
     info: dict
+
