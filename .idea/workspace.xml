@@ -19,13 +19,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vinic/OneDrive/Desktop/Codes/Orange-Ktor-Api-main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Vinic/OneDrive/Desktop/Codes/Health Care/healthcare/ui/caloriescalculator/CaloriesCalculator.py"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Vinicius Neves\Desktop\Health Care\healthcare" />
@@ -38,7 +38,28 @@
       <recent name="C:\Users\Vinicius Neves\Desktop\Health Care\healthcare\domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.CaloriesCalculator">
+    <configuration name="CaloriesCalculator" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Health Care" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Vinic\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/healthcare/ui/caloriescalculator" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/healthcare/ui/caloriescalculator/CaloriesCalculator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="CaloriesForFoodApiRepository" type="PythonConfigurationType" factoryName="Python">
       <module name="Health Care" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,6 +126,7 @@
     <list>
       <item itemvalue="Python.CaloriesForFoodApiRepository" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.CaloriesCalculator" />
       <item itemvalue="Python.ImcCalculatorRepository" />
     </list>
   </component>
