@@ -7,10 +7,12 @@ from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionM
 from healthcare.data.firebase.model.PersonImcModel import PersonImcModel
 
 '''Classe que contem todas funções para acesso e leitura no Firebase'''
+
+
 class FirebaseRepositoryImp:
 
     @staticmethod
-    async def getImcFromFirebase(id: str, day: str) -> list[str] | str:
+    async def getImcFromFirebase(id: str, day: str) -> list[str] | None:
         try:
             request = requests.get(
                 f'{FirebaseDb().BASE_URL}/{id}/{day}/IMC/.json'
@@ -25,7 +27,7 @@ class FirebaseRepositoryImp:
             return imcList
         except Exception as e:
             print(str(e))
-            return "Erro ao tentar puxar do Firebase"
+            return None
 
     @staticmethod
     def sendImcToFirebase(imc=Type[PersonImcModel]) -> Response | str:
@@ -41,7 +43,7 @@ class FirebaseRepositoryImp:
             return "Erro ao tentar enviar o Firebase"
 
     @staticmethod
-    async def getIngestionFromFirebase(id: str, day: str) -> list[str] | str:
+    async def getIngestionFromFirebase(id: str, day: str) -> list[str] | None:
         try:
             request = requests.get(
                 f'{FirebaseDb().BASE_URL}/{id}/{day}/Ingestion/.json'
@@ -56,7 +58,7 @@ class FirebaseRepositoryImp:
             return ingestionList
         except Exception as e:
             print(str(e))
-            return "Erro ao tentar puxar do Firebase"
+            return None
 
     @staticmethod
     def sendIngestionToFirebase(ingestion=Type[PersonIngestionModel]) -> Response | str:
@@ -64,6 +66,19 @@ class FirebaseRepositoryImp:
             request = requests.post(
                 f'{FirebaseDb().BASE_URL}/{ingestion.id}/{ingestion.day}/Ingestion/.json',
                 data=json.dumps(ingestion.info)
+            )
+
+            return request
+        except Exception as e:
+            print(str(e))
+            return "Erro ao tentar enviar o Firebase"
+
+    @staticmethod
+    def sendAgeAndWeightToFirebase(id: str, day: str, age: str, weight: str) -> Response | str:
+        try:
+            request = requests.post(
+                f'{FirebaseDb().BASE_URL}/{id}/{day}/PersonInformation/.json',
+                data=json.dumps({'age': age, 'weight': weight})
             )
 
             return request
