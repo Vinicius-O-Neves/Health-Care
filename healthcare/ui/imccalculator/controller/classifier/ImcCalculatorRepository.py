@@ -1,11 +1,12 @@
-from ImcClassifier import ImcClassifier
+from healthcare.ui.imccalculator.controller.classifier.ImcClassifier import ImcClassifier
 from healthcare.resources.Strings import Strings
+
 
 class ImcCalculatorRepository:
 
     def __init__(
             self,
-            weight: int,
+            weight: float,
             height: float,
             age: int,
             gender: str
