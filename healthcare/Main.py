@@ -31,3 +31,10 @@ print(asyncio.run(
         datetime.today().strftime("%Y-%m-%d").replace('-', '')
     )
 ))
+
+print(FirebaseRepositoryImp.sendAgeAndWeightToFirebase(
+    "4cd5c7c0-7918-40a8-a551-aed42b817524",
+    datetime.today().strftime("%Y-%m-%d").replace('-', ''),
+    "19",
+    "1.69"
+))
