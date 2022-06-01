@@ -19,3 +19,5 @@ class CaloriesForFoodApiRepositoryImp:
 
         return foodList
 
+
+print(CaloriesForFoodApiRepositoryImp.getAllFoodsByType("Frango"))
