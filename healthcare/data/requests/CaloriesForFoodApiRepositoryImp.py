@@ -1,6 +1,7 @@
 import requests
-from model.FoodItemsModel import FoodItemsModel
+
 from RequestsInstance import RequestsInstance
+from model.FoodItemsModel import FoodItemsModel
 
 
 class CaloriesForFoodApiRepositoryImp:
