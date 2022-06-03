@@ -1,6 +1,6 @@
-from healthcare.ui.imccalculator.controller.classifier.WomanClassifier import WomanClassifier
-from healthcare.ui.imccalculator.controller.classifier.ManClassifier import ManClassifier
 from healthcare.resources.Strings import Strings
+from healthcare.ui.imccalculator.controller.classifier.ManClassifier import ManClassifier
+from healthcare.ui.imccalculator.controller.classifier.WomanClassifier import WomanClassifier
 
 
 class ImcClassifier:
