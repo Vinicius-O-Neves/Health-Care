@@ -1,5 +1,5 @@
-from healthcare.ui.imccalculator.controller.classifier.ImcClassifier import ImcClassifier
 from healthcare.resources.Strings import Strings
+from healthcare.ui.imccalculator.controller.classifier.ImcClassifier import ImcClassifier
 
 
 class ImcCalculatorRepository:
