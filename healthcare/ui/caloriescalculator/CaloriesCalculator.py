@@ -1,6 +1,7 @@
 import asyncio
 import re
 from datetime import datetime
+
 from healthcare.data.firebase.repository.FirebaseRepositoryImp import FirebaseRepositoryImp
 
 
@@ -15,6 +16,8 @@ class CaloriesCalculator:
         total = sum([float(item) for item in re.findall("\d+", str(ingestionList))])
         dailyLimit = 3000
         consumedCalories = dailyLimit - total
+        if consumedCalories > 0:
+            consumedCalories = total
 
         return total, consumedCalories
 
