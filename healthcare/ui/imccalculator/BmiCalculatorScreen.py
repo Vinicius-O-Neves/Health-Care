@@ -2,7 +2,8 @@ import asyncio
 from datetime import datetime
 from tkinter import *
 
-from PIL import ImageTk, Image
+import customtkinter
+
 from healthcare.data.firebase.model.PersonImcModel import PersonImcModel
 from healthcare.data.firebase.repository.FirebaseRepositoryImp import FirebaseRepositoryImp
 from healthcare.ui.imccalculator.controller.classifier.ImcCalculatorRepository import ImcCalculatorRepository
@@ -53,28 +54,47 @@ class BMICalculatorScreen:
                      bg='#F2CCCC'
                      )
 
-        self.BMIgender = Entry(bg='#CACACA', font=('IBM Plex Sans Devanagari', 14))
-        self.BMIage = Entry(bg='#CACACA', font=('IBM Plex Sans Devanagari', 14))
-        self.BMIheight = Entry(bg='#CACACA', font=('IBM Plex Sans Devanagari', 14))
-        self.BMIweight = Entry(bg='#CACACA', font=('IBM Plex Sans Devanagari', 14))
-        self.btnBMI = Button(self.w, text='Calcular',
-                             command=self.Validar,
-                             font=('IBM Plex Sans Devanagari', 20),
-                             bg='#B72CA9')
+        self.BMIgender = customtkinter.CTkEntry(
+            bg='#CACACA', text_font=('IBM Plex Sans Devanagari', 14),
+            width=294,
+            bg_color='#F2CCCC',
+            height=34,
+            corner_radius=8,
+            fg_color='#c4c4c4',
+            border_width=2,
+            text_color='#000000')
+        self.BMIage = customtkinter.CTkEntry(
+            bg='#CACACA', text_font=('IBM Plex Sans Devanagari', 14), width=294,
+            height=34, corner_radius=8, fg_color='#c4c4c4', border_width=2,
+            text_color='#000000', bg_color='#F2CCCC')
+        self.BMIheight = customtkinter.CTkEntry(
+            bg='#CACACA', text_font=('IBM Plex Sans Devanagari', 14), width=294,
+            height=34, corner_radius=8, fg_color='#c4c4c4', border_width=2,
+            text_color='#000000', bg_color='#F2CCCC')
+        self.BMIweight = customtkinter.CTkEntry(
+            bg='#CACACA', text_font=('IBM Plex Sans Devanagari', 14), width=294,
+            height=34, corner_radius=8, fg_color='#c4c4c4', border_width=2,
+            text_color='#000000', bg_color='#F2CCCC')
+        self.btnBMI = customtkinter.CTkButton(
+            self.w, text='Calcular IMC', command=self.Validar,
+            text_font=('IBM Plex Sans Devanagari', 20), width=328,
+            height=40, corner_radius=15,
+            fg_color='#b72ca9', hover_color='#D380CB',
+            border_width=2, border_color='#000000')
 
         #     -----   LAYOUT DA TELA DE CALCULAR IMC  ----- '''
 
         txt1.pack(padx=82, pady=5)
         txt2.place(x=30, y=58)
-        self.BMIgender.place(x=46, y=110, width=294, height=34)
+        self.BMIgender.place(x=46, y=110)
         txt3.place(x=30, y=145)
-        self.BMIage.place(x=46, y=200, width=294, height=34)
+        self.BMIage.place(x=46, y=200)
         txt4.place(x=30, y=240)
-        self.BMIheight.place(x=46, y=304, width=294, height=34)
+        self.BMIheight.place(x=46, y=304)
         txt5.place(x=30, y=340)
-        self.BMIweight.place(x=46, y=410, width=294, height=34)
+        self.BMIweight.place(x=46, y=410)
         self.resp.place(x=82, y=470, width=222, height=43)
-        self.btnBMI.place(x=31, y=582, width=328, height=40)
+        self.btnBMI.place(x=31, y=582)
 
     #     -----   VALIDAÇÃO DAS ENTRADAS  ----- '''
     def Validar(self):
@@ -140,9 +160,9 @@ class BMICalculatorScreen:
                                      font=('Oswald', 36),
                                      bg='#F2CCCC', fg='#E37526'
                                      )
-        #self.imgBalance = ImageTk.PhotoImage(
-            #Image.open('healthcare/ui/imccalculator/balance.png'))
-        #self.img = Label(result_screen, image=self.imgBalance, bg='#F2CCCC')
+        # self.imgBalance = ImageTk.PhotoImage(
+        # Image.open('healthcare/ui/imccalculator/balance.png'))
+        # self.img = Label(result_screen, image=self.imgBalance, bg='#F2CCCC')
 
         #     -----   TEXTO DE CLASSIFICAÇÃO DO IMC ----- '''
 
