@@ -1,8 +1,8 @@
 class WomanClassifier:
-    
+
     def __init__(self, imc: float):
         self.imc = imc
-        
+
     def womanWith10(self) -> int:
         interval = {
             14.23 <= self.imc < 15.09: 5,
@@ -10,7 +10,7 @@ class WomanClassifier:
             17.00 <= self.imc < 20.19: 50,
             20.19 <= self.imc < 23.20: 85,
             self.imc >= 23.20: 95
-    }
+        }
         return interval[True]
 
     def womanWith11(self) -> int:
@@ -31,18 +31,18 @@ class WomanClassifier:
             22.17 <= self.imc < 25.95: 85,
             self.imc >= 25.95: 95
         }
-        return interval[True] 
-            
-    def womanWith13 (self) -> int:
-        interval = { 
+        return interval[True]
+
+    def womanWith13(self) -> int:
+        interval = {
             15.36 <= self.imc < 16.43: 5,
             16.43 <= self.imc < 18.95: 15,
             18.95 <= self.imc < 23.08: 50,
             23.08 <= self.imc < 27.07: 85,
             self.imc >= 27.07: 95
         }
-        return interval[True]                    
-    
+        return interval[True]
+
     def womanWith14(self) -> int:
         interval = {
             15.67 <= self.imc < 16.79: 5,
@@ -54,7 +54,7 @@ class WomanClassifier:
         return interval[True]
 
     def womanWith15(self) -> int:
-        interval = {    
+        interval = {
             16.01 <= self.imc < 17.16: 5,
             17.16 <= self.imc < 19.69: 15,
             19.69 <= self.imc < 24.29: 50,
@@ -101,4 +101,4 @@ class WomanClassifier:
             25.85 <= self.imc < 30.72: 85,
             self.imc >= 30.72: 95
         }
-        return interval[True]  
+        return interval[True]
