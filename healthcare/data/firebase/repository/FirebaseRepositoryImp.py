@@ -1,10 +1,12 @@
-import requests
 import json
 from typing import Type
+
+import requests
 from requests import Response
+
 from healthcare.data.firebase.FirebaseDb import FirebaseDb
-from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionModel
 from healthcare.data.firebase.model.PersonImcModel import PersonImcModel
+from healthcare.data.firebase.model.PersonIngestionModel import PersonIngestionModel
 
 '''Classe que contem todas funções para acesso e leitura no Firebase'''
 
@@ -30,7 +32,7 @@ class FirebaseRepositoryImp:
             return None
 
     @staticmethod
-    def sendImcToFirebase(imc=Type[PersonImcModel]) -> Response | str:
+    async def sendImcToFirebase(imc=Type[PersonImcModel]) -> Response | str:
         try:
             request = requests.post(
                 f'{FirebaseDb().BASE_URL}/{imc.id}/{imc.day}/IMC/.json',
@@ -61,7 +63,7 @@ class FirebaseRepositoryImp:
             return None
 
     @staticmethod
-    def sendIngestionToFirebase(ingestion=Type[PersonIngestionModel]) -> Response | str:
+    async def sendIngestionToFirebase(ingestion=Type[PersonIngestionModel]) -> Response | str:
         try:
             request = requests.post(
                 f'{FirebaseDb().BASE_URL}/{ingestion.id}/{ingestion.day}/Ingestion/.json',
@@ -74,7 +76,7 @@ class FirebaseRepositoryImp:
             return "Erro ao tentar enviar o Firebase"
 
     @staticmethod
-    def sendAgeAndWeightToFirebase(id: str, day: str, age: str, weight: str) -> Response | str:
+    async def sendAgeAndWeightToFirebase(id: str, day: str, age: str, weight: str) -> Response | str:
         try:
             request = requests.post(
                 f'{FirebaseDb().BASE_URL}/{id}/{day}/PersonInformation/.json',
